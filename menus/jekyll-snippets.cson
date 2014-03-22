@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable jekyll-snippets': 'jekyll-snippets:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'jekyll-snippets'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'jekyll-snippets:toggle' }
+      ]
+    ]
+  }
+]

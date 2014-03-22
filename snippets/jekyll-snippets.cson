@@ -1,0 +1,97 @@
+".source.gfm, .text.html":
+    "Front Matter":
+        prefix: "jekfm"
+        body: """---
+                layout: ${1:post}
+                title: $2
+                categories: $3
+                permalink: /blog/${4:}
+                tags: [$5]
+                comments: ${6:true}
+                excerpt: ${7:}
+                seo__desc: ${8:}
+                seo__key: ${9:}
+                ---
+                $0"""
+    "Assign":
+        prefix: "jekas"
+        body: "{% assign $1 = $2 %}"
+    "Capture":
+        prefix: "jekcap"
+        body: "{% capture $1 %}
+                $0
+                {% endcapture %}"
+    "Case":
+        prefix: "jekcas"
+        body: "{% case $1 %}
+                $0
+                {% endcase %}"
+    "Comment":
+        prefix: "jekcom"
+        body: "{% comment %}$0{% endcomment %}"
+
+    "Context Variable":
+        prefix: "jekcon"
+        body: "{{ $1 }}"
+
+    "Cycle":
+        prefix: "jekcy"
+        body: "{% cycle $1 %}"
+
+    "Elsif":
+        prefix: "jekel"
+        body: "{% elsif $1 %}"
+
+    "For":
+        prefix: "jekfo"
+        body: "{% for $1 in $2 %}
+	           $3
+               {% endfor %}"
+
+    "Gist":
+        prefix: "jekgi"
+        body: "{% gist $1}"
+
+    "Highlight":
+        prefix: "jekhi"
+        body: "{% highligth %}
+                $0
+                {% endhighlight %}"
+
+    "If":
+        prefix: "jekif"
+        body: "{% if $1 %}
+                $0
+                {% endif %}"
+
+    "Ifelse":
+        prefix: "jekife"
+        body: "{% if $1 %}
+	           $2
+               {% else %}
+               $3
+               {% endif %}"
+
+    "Include":
+        prefix: "jekin"
+        body: "{% include $1 %}"
+
+    "Post URL":
+        prefix: "jekpo"
+        body: "{% post_url $1 %}"
+
+    "Raw":
+        prefix: "jekra"
+        body: "{% raw %}
+                $0
+                {% endraw %}"
+
+    "Unless":
+        prefix: "jekun"
+        body: "{% unless $1 %}
+                $0
+                {% endunless %}"
+
+    "When":
+        prefix: "jekwh"
+        body: "{% when $1 %}"
