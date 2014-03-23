@@ -54,7 +54,7 @@
 
     "Highlight":
         prefix: "jekhi"
-        body: "{% highligth %}
+        body: "{% highlight %}
                 $0
                 {% endhighlight %}"
 
