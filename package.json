@@ -1,7 +1,7 @@
 {
   "name": "jekyll-snippets",
   "main": "./lib/jekyll-snippets",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Jekyll snippets for the Atom editor",
   "activationEvents": [
     "jekyll-snippets:toggle"
