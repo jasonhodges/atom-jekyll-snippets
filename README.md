@@ -4,7 +4,7 @@ Jekyll snippets for the Atom editor. This is a build from the [sublime-jekyll pa
 by [@23maverick23.](https://github.com/23maverick23) I also want to thank [Christina Solana](https://github.com/CristinaSolana) for the Atom invite and
 providing some direction.
 
-![A screenshot of your spankin' package](http://jekyllrb.com/img/logo-2x.png)
+[![A screenshot of your spankin' package](http://jekyllrb.com/img/logo-2x.png)](http://jekyllrb.com)
 
 - each prefix starts with jek, for example:
   - jekfm `tab` = front-matter
