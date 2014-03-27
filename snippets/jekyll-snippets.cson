@@ -1,4 +1,4 @@
-".source.gfm, .text.html":
+".source.gfm, .text.html, .text.md, .text.markdown":
     "Front Matter":
         prefix: "jekfm"
         body: """---
