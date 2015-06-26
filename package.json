@@ -3,7 +3,7 @@
   "main": "./lib/jekyll-snippets",
   "version": "0.1.2",
   "description": "Jekyll snippets for the Atom editor",
-  "activationEvents": [
+  "activationCommands": [
     "jekyll-snippets:toggle"
   ],
   "repository": "https://github.com/jasonhodges/atom-jekyll-snippets",
