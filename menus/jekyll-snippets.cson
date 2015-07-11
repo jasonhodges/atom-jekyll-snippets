@@ -3,13 +3,14 @@
   '.overlayer':
       'Enable jekyll-snippets': 'jekyll-snippets:toggle'
 
-'atom-text-editor': [{
-  label: 'Packages',
-  submenu: [
-    {label: 'Jekyll Snippets',
-      submenu: [
-        {label: 'Toggle', command: 'jekyll-snippets:toggle'}
+'menu': [
+  {
+    'label': 'Packages',
+    'submenu': [
+      'label': 'Jekyll Snippets',
+      'submenu': [
+        {'label': 'Toggle', 'command': 'jekyll-snippets:toggle'}
       ]
-    }
-  ]
-}]
+    ]
+  }
+]
