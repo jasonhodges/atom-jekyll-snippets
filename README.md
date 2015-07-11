@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jasonhodges/atom-jekyll-snippets.svg?branch=master)](https://travis-ci.org/jasonhodges/atom-jekyll-snippets)
+
 # Jekyll snippets package for the Atom editor.
 
 Jekyll snippets for the Atom editor. This is a build from the [sublime-jekyll package](https://github.com/23maverick23/sublime-jekyll)
