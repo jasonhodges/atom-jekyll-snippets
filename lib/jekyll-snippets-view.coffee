@@ -1,4 +1,6 @@
-{View} = require 'atom'
+# {TextEditorView} = require 'atom-space-pen-views'
+{$} = require 'atom-space-pen-views'
+{$, View} = require 'space-pen'
 
 module.exports =
 class JekyllSnippetsView extends View
@@ -6,19 +8,16 @@ class JekyllSnippetsView extends View
     @div class: 'jekyll-snippets overlay from-top', =>
       @div "The JekyllSnippets package is Alive! It's ALIVE!", class: "message"
 
-  initialize: (serializeState) ->
-    atom.workspaceView.command "jekyll-snippets:toggle", => @toggle()
+  initialize: ->
+    atom.commands.add @element,
+    'jekyll-snippets:toggle', => @toggle()
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
 
   # Tear down any state and detach
   destroy: ->
-    @detach()
+    @element.remove()
 
-  toggle: ->
-    console.log "JekyllSnippetsView was toggled!"
-    if @hasParent()
-      @detach()
-    else
-      atom.workspaceView.append(this)
+  getElement: ->
+    @element

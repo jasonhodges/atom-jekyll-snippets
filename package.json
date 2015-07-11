@@ -1,15 +1,36 @@
 {
   "name": "jekyll-snippets",
   "main": "./lib/jekyll-snippets",
-  "version": "0.1.2",
+  "version": "0.2.1",
   "description": "Jekyll snippets for the Atom editor",
-  "activationCommands": [
-    "jekyll-snippets:toggle"
-  ],
-  "repository": "https://github.com/jasonhodges/atom-jekyll-snippets",
-  "license": "MIT",
-  "engines": {
-    "atom": ">0.50.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonhodges/atom-jekyll-snippets"
   },
-  "dependencies": {}
+  "bugs": {
+    "url": "https://github.com/jasonhodges/atom-jekyll-snippets/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jason Hodges",
+    "email": "jason@jasonhodges.me",
+    "url": "https://github.com/jasonhodges"
+  },
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {
+    "space-pen": "^4",
+    "atom-space-pen-views": "^2.0.3"
+  },
+  "activationCommands": {
+    "atom-workspace": [
+      "jekyll-snippets:toggle"
+    ]
+  },
+  "keywords": [
+    "atom",
+    "jekyll",
+    "snippets"
+  ]
 }

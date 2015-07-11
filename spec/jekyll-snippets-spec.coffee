@@ -1,4 +1,5 @@
 JekyllSnippets = require '../lib/jekyll-snippets'
+# {$} = require 'atom-space-pen-views'
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 #
@@ -6,24 +7,26 @@ JekyllSnippets = require '../lib/jekyll-snippets'
 # or `fdescribe`). Remove the `f` to unfocus the block.
 
 describe "JekyllSnippets", ->
-  activationPromise = null
+  [workspaceElement, activationPromise] = []
 
   beforeEach ->
-    atom.workspaceView = new WorkspaceView
-    activationPromise = atom.packages.activatePackage('jekyllSnippets')
+    workspaceElement = atom.views.getView(atom.workspace)
+    activationPromise = atom.packages.activatePackage('jekyll-snippets')
+    activationPromise.fail (reason) ->
+      throw reason
+
+    jasmine.attachToDOM(workspaceElement)
 
   describe "when the jekyll-snippets:toggle event is triggered", ->
     it "attaches and then detaches the view", ->
-      expect(atom.workspaceView.find('.jekyll-snippets')).not.toExist()
+      expect(workspaceElement.querySelector('.jekyll-snippets')).not.toExist()
 
-      # This is an activation event, triggering it will cause the package to be
-      # activated.
-      atom.workspaceView.trigger 'jekyll-snippets:toggle'
+      atom.commands.dispatch workspaceElement, 'jekyll-snippets:toggle'
 
       waitsForPromise ->
         activationPromise
 
       runs ->
-        expect(atom.workspaceView.find('.jekyll-snippets')).toExist()
-        atom.workspaceView.trigger 'jekyll-snippets:toggle'
-        expect(atom.workspaceView.find('.jekyll-snippets')).not.toExist()
+        expect(atom.packages.isPackageActive('jekyll-snippets')).toBe true
+        atom.commands.dispatch workspaceElement, 'jekyll-snippets:toggle'
+        expect(workspaceElement.querySelector('.jekyll-snippets')).not.toExist()
