@@ -1,2 +1,5 @@
-'.workspace':
+'.platform-darwin atom-workspace':
+  'cmd-alt-j': 'jekyll-snippets:toggle'
+
+'.platform-win32 atom-workspace, .platform-linux atom-workspace':
   'ctrl-alt-j': 'jekyll-snippets:toggle'
