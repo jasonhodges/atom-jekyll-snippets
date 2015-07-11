@@ -1,7 +1,7 @@
 {
   "name": "jekyll-snippets",
   "main": "./lib/jekyll-snippets",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Jekyll snippets for the Atom editor",
   "repository": {
     "type": "git",
